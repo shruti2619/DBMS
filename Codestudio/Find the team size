@@ -1,0 +1,5 @@
+select e.employee_id, coalesce(count(f.employee_id),0) as team_size
+from employee e inner join employee f
+on e.team_id = f.team_id
+group by e.employee_id
+order by employee_id;
