@@ -1,0 +1,5 @@
+# Write your MySQL query statement below
+select distinct a.email as Email 
+from person a inner join person b
+on a.email= b.email 
+where b.id>a.id;
